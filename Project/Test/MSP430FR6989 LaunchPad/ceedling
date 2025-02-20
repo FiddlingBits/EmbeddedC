@@ -1,0 +1,16 @@
+#!/bin/bash
+ceedling clean clobber gcov:all utils:gcov
+mkdir -p Build/artifacts/valgrind/
+for executable in Build/gcov/out/*.exe; do
+  filename=$(basename -- "${executable}")
+  valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=Build/artifacts/valgrind/"${filename%.*}"_memory_leak_report.txt ${executable}
+done
+memory_leak_report=$(grep --files-without-match 'All heap blocks were freed -- no leaks are possible' Build/artifacts/valgrind/*_memory_leak_report.txt)
+echo; echo Memory Leak Report:;
+if [ "${#memory_leak_report}" -eq 0 ]; then
+  echo "  None"
+else
+  for report in $memory_leak_report; do
+    echo "  ${report}"
+  done
+fi

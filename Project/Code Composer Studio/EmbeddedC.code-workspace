@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": "MSP430FR6989 LaunchPad"
+    }
+  ],
+  "settings": {},
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "MSP430FR6989 LaunchPad",
+        "type": "ccs-debug",
+        "request": "launch",
+        "projectInfo": {
+          "name": "MSP430FR6989 LaunchPad",
+          "resourceId": "/MSP430FR6989 LaunchPad"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+:cmock:
+  :enforce_strict_ordering: TRUE
+  :mock_prefix: mock_
+  :treat_externs: :include
+  :when_no_prototypes: :error
+
+:defines:
+  :test:
+    - __MSP430FR6989__
+    - CEEDLING
+
+:extension:
+  :executable: .exe
+
+:gcov:
+  :gcovr:
+    :html_medium_threshold: 50
+    :html_high_threshold: 100
+    :report_include: "../../../Source/Common/|../../../Source/Driver/"
+    :report_root: "../../../"
+  :reports:
+    - HtmlDetailed
+  :utilities:
+    - gcovr
+
+:paths:
+  :include:
+    - ../../../Library/MSP430FR5xx_6xx/**
+    - ../../../Source/Common/**
+    - ../../../Source/Driver/MSP430FR6989 LaunchPad/**
+  :source:
+    - ../../../Source/Common/**
+    - ../../../Source/Driver/**
+  :test:
+    - ../../../Source/Test/MSP430FR6989 LaunchPad/**
+
+:plugins:
+  :enabled:
+    - gcov
+    - report_tests_pretty_stdout
+    - report_build_warnings_log
+
+:project:
+  :build_root: Build/
+  :ceedling_version: 0.31.1
+  :test_file_prefix: test_
+  :which_ceedling: gem
+
+:unity:
+  :defines:
+    - UNITY_INCLUDE_DOUBLE
