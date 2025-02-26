@@ -5,6 +5,7 @@
 #include "clock.h"
 #include "driver.h"
 #include "pmm.h"
+#include "serial.h"
 #include "system.h"
 #include "wdt_a.h"
 
@@ -53,4 +54,5 @@ static void system_initDriver(void)
 {
     /*** Initialize Driver ***/
     clock_init();
+    serial_init();
 }

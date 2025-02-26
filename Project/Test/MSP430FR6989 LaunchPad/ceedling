@@ -1,7 +1,12 @@
 #!/bin/bash
-ceedling clean clobber gcov:all utils:gcov
+
+# Ceedling
+clear
+ceedling clean clobber gcov:all
+
+# Valgrind
 mkdir -p Build/artifacts/valgrind/
-for executable in Build/gcov/out/*.exe; do
+for executable in Build/gcov/out/*/*.exe; do
   filename=$(basename -- "${executable}")
   valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=Build/artifacts/valgrind/"${filename%.*}"_memory_leak_report.txt ${executable}
 done

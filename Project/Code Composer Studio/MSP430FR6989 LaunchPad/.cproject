@@ -47,8 +47,8 @@
                                 </option>
                                 <option id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.compilerID.DIAG_WRAP.688542386" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.compilerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.MSP430_21.6.compilerID.DIAG_WRAP.off" valueType="enumerated"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.compilerID.INCLUDE_PATH.332381364" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.compilerID.INCLUDE_PATH" valueType="includePath">
-                                    <listOptionValue value="${CCS_BASE_ROOT}/msp430/include"/>
-                                    <listOptionValue value="${CG_TOOL_ROOT}/include"/>
+                                    <listOptionValue value="${CCS_BASE_ROOT}/msp430/include/"/>
+                                    <listOptionValue value="${CG_TOOL_ROOT}/include/"/>
                                     <listOptionValue value="${PROJECT_ROOT}/../../../Library/MSP430FR5xx_6xx/"/>
                                     <listOptionValue value="${PROJECT_ROOT}/../../../Source/Common/"/>
                                     <listOptionValue value="${PROJECT_ROOT}/../../../Source/Driver/MSP430FR6989 LaunchPad/"/>
@@ -68,11 +68,11 @@
                                     <listOptionValue value="_MPU_ENABLE"/>
                                 </option>
                                 <option id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.linkerID.SEARCH_PATH.118553362" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.linkerID.SEARCH_PATH" valueType="libPaths">
-                                    <listOptionValue value="${CCS_BASE_ROOT}/msp430/include"/>
-                                    <listOptionValue value="${CCS_BASE_ROOT}/msp430/lib/5xx_6xx_FRxx"/>
-                                    <listOptionValue value="${CCS_BASE_ROOT}/msp430/lib/FR59xx"/>
-                                    <listOptionValue value="${CG_TOOL_ROOT}/include"/>
-                                    <listOptionValue value="${CG_TOOL_ROOT}/lib"/>
+                                    <listOptionValue value="${CCS_BASE_ROOT}/msp430/include/"/>
+                                    <listOptionValue value="${CCS_BASE_ROOT}/msp430/lib/5xx_6xx_FRxx/"/>
+                                    <listOptionValue value="${CCS_BASE_ROOT}/msp430/lib/FR59xx/"/>
+                                    <listOptionValue value="${CG_TOOL_ROOT}/include/"/>
+                                    <listOptionValue value="${CG_TOOL_ROOT}/lib/"/>
                                 </option>
                                 <option id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.linkerID.USE_HW_MPY.1872160956" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.linkerID.USE_HW_MPY" value="com.ti.ccstudio.buildDefinitions.MSP430_21.6.linkerID.USE_HW_MPY.F5" valueType="enumerated"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.linkerID.CINIT_HOLD_WDT.2024752919" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.linkerID.CINIT_HOLD_WDT" value="com.ti.ccstudio.buildDefinitions.MSP430_21.6.linkerID.CINIT_HOLD_WDT.on" valueType="enumerated"/>
@@ -91,8 +91,31 @@
                             </tool>
                         </toolChain>
                     </folderInfo>
+                    <folderInfo id="com.ti.ccstudio.buildDefinitions.MSP430.Release.1668307842.Library" name="Library" resourcePath="Library">
+                        <toolChain id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.exe.ReleaseToolchain.1337672806" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.exe.ReleaseToolchain" unusedChildren="">
+                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.156159638.543138528" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.156159638"/>
+                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.323490535.1451845781" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.323490535"/>
+                            <targetPlatform id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.exe.targetPlatformRelease" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.exe.targetPlatformRelease"/>
+                            <tool id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.exe.compilerRelease.1001081698" name="MSP430 Compiler" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.exe.compilerRelease.1724228245">
+                                <option id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.compilerID.DIAG_WARNING.1966072995" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.compilerID.DIAG_WARNING" valueType="stringList"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.compilerID.DIAG_SUPPRESS.555518600" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.compilerID.DIAG_SUPPRESS" valueType="stringList">
+                                    <listOptionValue value="1527"/>
+                                    <listOptionValue value="1528"/>
+                                    <listOptionValue value="1530"/>
+                                    <listOptionValue value="1535"/>
+                                    <listOptionValue value="1544"/>
+                                    <listOptionValue value="1546"/>
+                                    <listOptionValue value="2553"/>
+                                </option>
+                            </tool>
+                            <tool id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.exe.linkerRelease.370390210" name="MSP430 Linker" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.exe.linkerRelease.1132710392"/>
+                            <tool id="com.ti.ccstudio.buildDefinitions.MSP430_21.6.hex.1517557253" name="MSP430 Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.MSP430_21.6.hex.375213477"/>
+                        </toolChain>
+                    </folderInfo>
                     <sourceEntries>
                         <entry excluding="Source/Test" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Source/Test/Driver/MSP430FR6989 LaunchPad/Support"/>
+                        <entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Source/Test/MSP430FR6989 LaunchPad"/>
                     </sourceEntries>
                 </configuration>
             </storageModule>

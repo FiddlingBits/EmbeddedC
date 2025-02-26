@@ -25,14 +25,16 @@
 
 :paths:
   :include:
+    - ./Support/**
     - ../../../Library/MSP430FR5xx_6xx/**
     - ../../../Source/Common/**
     - ../../../Source/Driver/MSP430FR6989 LaunchPad/**
   :source:
     - ../../../Source/Common/**
-    - ../../../Source/Driver/**
+    - ../../../Source/Driver/MSP430FR6989 LaunchPad/**
   :test:
-    - ../../../Source/Test/MSP430FR6989 LaunchPad/**
+    - ../../../Source/Test/Common/**
+    - ../../../Source/Test/Driver/MSP430FR6989 LaunchPad/**
 
 :plugins:
   :enabled:
