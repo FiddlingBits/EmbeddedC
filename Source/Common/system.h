@@ -5,7 +5,22 @@
 #pragma once
 
 /****************************************************************************************************
+ * Include
+ ****************************************************************************************************/
+
+#include <stddef.h>
+
+/****************************************************************************************************
+ * Type Definition
+ ****************************************************************************************************/
+
+typedef void (*system_freeCallback_t)(void *memory);
+typedef void *(*system_mallocCallback_t)(size_t size);
+
+/****************************************************************************************************
  * Function Prototype
  ****************************************************************************************************/
 
-extern void system_init(void);
+extern void system_free(void **memory);
+extern void system_init(system_freeCallback_t freeCallback, system_mallocCallback_t mallocCallback);
+extern void *system_malloc(size_t size);

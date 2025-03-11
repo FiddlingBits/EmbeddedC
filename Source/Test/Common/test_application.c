@@ -5,6 +5,7 @@
 #include "application.h"
 #include "mock_system.h"
 #include "project.h"
+#include <stdlib.h>
 #include "unity.h"
 
 /****************************************************************************************************
@@ -28,7 +29,7 @@ void test_PROJECT_MAIN(void)
 {
     /*** Project Main ***/
     /* Mock */
-    system_init_Expect();
+    system_init_Expect(free, malloc);
 
     /* Project Main */
     PROJECT_MAIN();
